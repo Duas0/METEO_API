@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MeteoAPI · La meteorología en tu mano</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/meteoapi.css">
+</head>
+<body>
+<header class="cabecera">
+    <a class="marca" href="/"><img src="/img/logo.png" alt="" width="42" height="42">MeteoAPI</a>
+    <nav aria-label="Navegación principal">
+        <a class="actual" href="/" aria-current="page">Inicio</a>
+        <a href="/estaciones">Estaciones</a>
+        <a href="/ubicacion">Por ubicación</a>
+        <a href="/estaciones/nueva">Añadir estación</a>
+    </nav>
+</header>
+<main class="contenedor">
+    <section class="comienzo">
+        <h1>La meteorología en tu mano</h1>
+        <p>Consulta la última observación de las estaciones meteorológicas.</p>
+        <p class="nota">Prototipo con ocho estaciones y datos ficticios. Los cambios se guardan en memoria hasta reiniciar.</p>
+    </section>
+    <section class="panel" aria-labelledby="web-titulo">
+        <h2 id="web-titulo">Consultar estaciones</h2>
+        <ul class="lista-enlaces">
+            <li><a href="/estaciones">Listado y filtros por nombre, municipio y provincia</a></li>
+            <li><a href="/estaciones/1">Detalle de Madrid Centro</a></li>
+            <li><a href="/ubicacion">Buscar por coordenadas o carretera</a></li>
+            <li><a href="/estaciones/nueva">Añadir una estación</a></li>
+        </ul>
+    </section>
+    <section class="panel" aria-labelledby="api-titulo">
+        <h2 id="api-titulo">API REST</h2>
+        <p>Las mismas estaciones en formato JSON.</p>
+        <ul class="lista-enlaces">
+            <li><a href="/api/estaciones">Todas las estaciones</a></li>
+            <li><a href="/api/estaciones?provincia=Badajoz">Filtrar por provincia: Badajoz</a></li>
+            <li><a href="/api/estaciones/1">Estación de ejemplo</a></li>
+            <li><a href="/api/estaciones/con-rayos">Estaciones con rayos</a></li>
+            <li><a href="/api/estaciones/viento">Estaciones con viento de al menos 30 km/h</a></li>
+            <li><a href="/api/estaciones/cercana?latitud=40.42&amp;longitud=-3.70">Estación más cercana a unas coordenadas</a></li>
+        </ul>
+    </section>
+</main>
+<footer class="pie"><span>MeteoAPI · Isaac Moreno Duaso</span><span>Datos ficticios · Últimas observaciones de ejemplo</span></footer>
+</body>
+</html>
